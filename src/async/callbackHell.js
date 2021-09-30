@@ -19,8 +19,19 @@ function bye(name, otroCallback) {
   }, 1000)
 }
 
+function conversation(name, times, callback) {
+  if (times > 0) {
+    speak(() => {
+      conversation(name, --times, callback)
+    })
+  } else {
+    bye(name, callback)
+  }
+}
+
+console.log('Iniciando proceso...')
 hello('Santiago', (name) => {
-  bye(name, () => {
-    console.log('Terminamos')
+  conversation(name, 3, () => {
+    console.log('Proceso terminado')
   })
 })
