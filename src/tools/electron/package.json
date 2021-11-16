@@ -1,0 +1,16 @@
+{
+  "name": "electron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "Santiago Bastidas <santiagobastidasrodriguez@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^16.0.0"
+  }
+}
